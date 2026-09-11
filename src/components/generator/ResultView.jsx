@@ -78,8 +78,8 @@ const ResultView = ({
           >
             {copiedFull ? (
               <>
-                <Check size={14} color="var(--accent-emerald)" />
-                <span style={{ color: 'var(--accent-emerald)' }}>Copied Post!</span>
+                <Check size={14} color="var(--color-success)" />
+                <span style={{ color: 'var(--color-success)' }}>Copied Post!</span>
               </>
             ) : (
               <>
@@ -115,7 +115,7 @@ const ResultView = ({
             {isSaving ? (
               <Spinner size={14} />
             ) : isSaved ? (
-              <Check size={14} color="var(--accent-emerald)" />
+              <Check size={14} color="var(--color-success)" />
             ) : (
               <Bookmark size={14} />
             )}

@@ -45,7 +45,7 @@ const ResultCard = ({
     <div className="glass-panel result-box animate-fade-in">
       <div className="card-header" style={{ marginBottom: '0.65rem' }}>
         <div className="card-title">
-          {Icon && <Icon size={16} color="var(--primary-light)" />}
+          {Icon && <Icon size={16} color="var(--color-primary)" />}
           <span>{title}</span>
           {badge && <span className={`badge badge-${badgeType}`}>{badge}</span>}
         </div>
@@ -65,7 +65,7 @@ const ResultCard = ({
             >
               {isEditing ? (
                 <>
-                  <CheckSquare size={14} color="var(--accent-emerald)" />
+                  <CheckSquare size={14} color="var(--color-success)" />
                   <span>Done</span>
                 </>
               ) : (
@@ -85,8 +85,8 @@ const ResultCard = ({
           >
             {copied ? (
               <>
-                <Check size={14} color="var(--accent-emerald)" />
-                <span style={{ color: 'var(--accent-emerald)' }}>Copied!</span>
+                <Check size={14} color="var(--color-success)" />
+                <span style={{ color: 'var(--color-success)' }}>Copied!</span>
               </>
             ) : (
               <>

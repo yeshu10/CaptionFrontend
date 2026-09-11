@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer
       style={{
-        borderTop: '1px solid var(--border-subtle)',
+        borderTop: '1px solid var(--color-border)',
         padding: '2.5rem 0',
         marginTop: 'auto',
-        background: 'rgba(11, 15, 25, 0.95)'
+        background: 'var(--color-background)'
       }}
     >
       <div
@@ -17,19 +17,19 @@ const Footer = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1rem',
+          gap: '0.75rem',
           textAlign: 'center'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700 }}>
-          <Sparkles size={18} color="var(--primary-light)" />
-          <span>AI Instagram Caption Generator</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, color: 'var(--color-text)' }}>
+          <Sparkles size={16} color="var(--color-primary)" />
+          <span>Caption<span style={{ color: 'var(--color-primary)' }}>GenAI</span></span>
         </div>
-        <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>
-          Supercharged by Google Gemini Vision. Built for artists, creators, and brands.
+        <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>
+          Supercharged by Google Gemini Vision. Built for creators, artists, and storytellers.
         </p>
-        <p style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-          Crafted with <Heart size={14} color="#EC4899" fill="#EC4899" /> using the MERN Stack.
+        <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+          Crafted with <Heart size={14} color="var(--color-primary)" fill="var(--color-primary)" /> for creators everywhere.
         </p>
       </div>
     </footer>

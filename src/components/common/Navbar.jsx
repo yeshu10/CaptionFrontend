@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { Sparkles, LayoutDashboard, History, LogOut, LogIn, UserPlus } from 'lucide-react';
+import { Sparkles, LayoutDashboard, History, User, LogOut, LogIn, UserPlus } from 'lucide-react';
 
 const Navbar = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -17,10 +17,11 @@ const Navbar = () => {
       <div className="container navbar-container">
         <Link to="/" className="nav-brand">
           <div className="nav-logo-icon">
-            <Sparkles size={20} />
+            <Sparkles size={19} />
           </div>
           <span>
-            Caption<span className="gradient-text">GenAI</span>
+            <span className="brand-text-caption">Caption</span>
+            <span className="brand-text-genai">GenAI</span>
           </span>
         </Link>
 
@@ -46,6 +47,16 @@ const Navbar = () => {
                 <History size={18} />
                 <span>History</span>
               </NavLink>
+
+              <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? 'active' : ''}`
+                }
+              >
+                <User size={18} />
+                <span>Profile</span>
+              </NavLink>
             </>
           ) : (
             <NavLink
@@ -62,7 +73,7 @@ const Navbar = () => {
         <div className="nav-user">
           {isAuthenticated ? (
             <>
-              <div className="user-badge">
+              <Link to="/profile" className="user-badge" title="View Creator Profile">
                 <img
                   src={
                     user?.profileImage ||
@@ -74,7 +85,7 @@ const Navbar = () => {
                   className="user-avatar"
                 />
                 <span className="user-name">{user?.name}</span>
-              </div>
+              </Link>
               <button
                 className="btn-icon"
                 onClick={handleLogout}

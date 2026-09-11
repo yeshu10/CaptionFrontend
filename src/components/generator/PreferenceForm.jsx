@@ -42,7 +42,7 @@ const PreferenceForm = ({
     <div className="glass-panel uploader-card">
       <div className="card-header">
         <div className="card-title">
-          <Sliders size={18} color="var(--primary-light)" />
+          <Sliders size={18} color="var(--color-primary)" />
           <span>Style & Preferences</span>
         </div>
       </div>
@@ -52,7 +52,7 @@ const PreferenceForm = ({
         <div className="form-group">
           <label className="form-label">
             <span>Content Type</span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>
               Tailors visual context
             </span>
           </label>
@@ -75,7 +75,7 @@ const PreferenceForm = ({
         <div className="form-group">
           <label className="form-label">
             <span>Vibe / Mood</span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>
               Controls tone & emojis
             </span>
           </label>
@@ -106,10 +106,10 @@ const PreferenceForm = ({
                 type="button"
                 className={`pill-option ${length === len.label ? 'active' : ''}`}
                 onClick={() => handlePillClick('length', len.label)}
-                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.85rem' }}
+                style={{ flexDirection: 'column', alignItems: 'flex-start', padding: '0.5rem 0.95rem' }}
               >
                 <span style={{ fontWeight: 700 }}>{len.label}</span>
-                <span style={{ fontSize: '0.7rem', opacity: 0.75 }}>{len.desc}</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>{len.desc}</span>
               </button>
             ))}
           </div>
@@ -119,10 +119,10 @@ const PreferenceForm = ({
         <div className="form-group" style={{ marginBottom: '1.5rem' }}>
           <label className="form-label" htmlFor="customInstructions">
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <MessageSquare size={14} />
+              <MessageSquare size={14} color="var(--color-primary)" />
               <span>Custom Creator Instructions</span>
             </span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>
               Optional
             </span>
           </label>
@@ -148,12 +148,12 @@ const PreferenceForm = ({
           {isGenerating ? (
             <>
               <Spinner size={18} />
-              <span>Analyzing Visuals with Gemini AI...</span>
+              <span>Creating your caption...</span>
             </>
           ) : (
             <>
               <Sparkles size={18} />
-              <span>Generate Instagram Content</span>
+              <span>Generate Caption</span>
             </>
           )}
         </button>

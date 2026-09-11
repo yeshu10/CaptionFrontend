@@ -131,8 +131,8 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
                 height: '120px',
                 borderRadius: 'var(--radius-md)',
                 overflow: 'hidden',
-                background: '#000000',
-                border: '1px solid var(--border-subtle)',
+                background: 'var(--color-surface-tint)',
+                border: '1px solid var(--color-border)',
                 flexShrink: 0
               }}
             >
@@ -150,11 +150,11 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
               <span className="badge badge-pink">{item.mood}</span>
               <span className="badge badge-cyan">{item.length || 'Medium'}</span>
             </div>
-            <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
+            <span style={{ fontSize: '0.8125rem', color: 'var(--color-text-muted)' }}>
               Created on {new Date(item.createdAt).toLocaleString()}
             </span>
             {item.additionalInstructions && (
-              <span style={{ fontSize: '0.8125rem', color: 'var(--text-secondary)' }}>
+              <span style={{ fontSize: '0.8125rem', color: 'var(--color-text-secondary)' }}>
                 Instructions: "{item.additionalInstructions}"
               </span>
             )}
@@ -163,10 +163,10 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
 
         {/* Hook */}
         {item.hook && (
-          <div className="glass-panel" style={{ padding: '1rem' }}>
+          <div className="soft-panel" style={{ padding: '1rem' }}>
             <div className="card-header" style={{ marginBottom: '0.5rem' }}>
               <div className="card-title" style={{ fontSize: '0.875rem' }}>
-                <Zap size={14} color="var(--secondary)" />
+                <Zap size={14} color="var(--color-primary)" />
                 <span>Hook</span>
               </div>
               <button
@@ -178,15 +178,15 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
                 <Copy size={14} />
               </button>
             </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-light)' }}>{item.hook}</p>
+            <p style={{ fontSize: '0.9rem', color: 'var(--color-text)' }}>{item.hook}</p>
           </div>
         )}
 
         {/* Editable Caption */}
-        <div className="glass-panel" style={{ padding: '1rem' }}>
+        <div className="soft-panel" style={{ padding: '1rem' }}>
           <div className="card-header" style={{ marginBottom: '0.5rem' }}>
             <div className="card-title" style={{ fontSize: '0.875rem' }}>
-              <FileText size={14} color="var(--primary-light)" />
+              <FileText size={14} color="var(--color-primary)" />
               <span>Caption (Editable)</span>
             </div>
             <button
@@ -208,10 +208,10 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
 
         {/* CTA */}
         {item.cta && (
-          <div className="glass-panel" style={{ padding: '1rem' }}>
+          <div className="soft-panel" style={{ padding: '1rem' }}>
             <div className="card-header" style={{ marginBottom: '0.5rem' }}>
               <div className="card-title" style={{ fontSize: '0.875rem' }}>
-                <Send size={14} color="var(--accent-cyan)" />
+                <Send size={14} color="var(--color-primary)" />
                 <span>Call to Action</span>
               </div>
               <button
@@ -223,16 +223,16 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
                 <Copy size={14} />
               </button>
             </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-light)' }}>{item.cta}</p>
+            <p style={{ fontSize: '0.9rem', color: 'var(--color-text)' }}>{item.cta}</p>
           </div>
         )}
 
         {/* Hashtags */}
         {item.hashtags && item.hashtags.length > 0 && (
-          <div className="glass-panel" style={{ padding: '1rem' }}>
+          <div className="soft-panel" style={{ padding: '1rem' }}>
             <div className="card-header" style={{ marginBottom: '0.5rem' }}>
               <div className="card-title" style={{ fontSize: '0.875rem' }}>
-                <Hash size={14} color="var(--primary-light)" />
+                <Hash size={14} color="var(--color-primary)" />
                 <span>Hashtags ({item.hashtags.length})</span>
               </div>
               <button
@@ -261,10 +261,10 @@ const HistoryModal = ({ item, isOpen, onClose, onUpdate, onDelete }) => {
 
         {/* Keywords */}
         {item.keywords && item.keywords.length > 0 && (
-          <div className="glass-panel" style={{ padding: '1rem' }}>
+          <div className="soft-panel" style={{ padding: '1rem' }}>
             <div className="card-header" style={{ marginBottom: '0.5rem' }}>
               <div className="card-title" style={{ fontSize: '0.875rem' }}>
-                <Target size={14} color="var(--accent-emerald)" />
+                <Target size={14} color="var(--color-success)" />
                 <span>SEO Keywords</span>
               </div>
             </div>

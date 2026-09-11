@@ -14,7 +14,7 @@ const HistoryFilter = ({
   onReset
 }) => {
   return (
-    <div className="glass-panel history-filters-bar">
+    <div className="card history-filters-bar">
       {/* Search Input */}
       <div className="search-input-wrapper">
         <Search size={18} className="search-input-icon" />

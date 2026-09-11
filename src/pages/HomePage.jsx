@@ -26,12 +26,12 @@ const HomePage = () => {
 
         <h1 className="hero-title">
           Turn Any Visual into <br />
-          <span className="gradient-text">Viral Instagram Content</span>
+          <span className="editorial-serif">Inspiring Instagram Stories</span>
         </h1>
 
         <p className="hero-subtitle">
-          AI Instagram Caption Generator analyzes your paintings, reels, products, and photos.
-          Get scroll-stopping hooks, high-converting captions, custom CTAs, and viral hashtags in seconds.
+          CaptionGenAI understands your artwork, photography, reels, and products.
+          Craft scroll-stopping hooks, authentic creator captions, and targeted hashtags with Google Gemini.
         </p>
 
         <div className="hero-actions">
@@ -39,7 +39,7 @@ const HomePage = () => {
             to={isAuthenticated ? '/dashboard' : '/register'}
             className="btn btn-primary btn-lg"
           >
-            <span>{isAuthenticated ? 'Open Studio Dashboard' : 'Start Creating for Free'}</span>
+            <span>{isAuthenticated ? 'Open Creator Studio' : 'Start Creating for Free'}</span>
             <ArrowRight size={18} />
           </Link>
           {!isAuthenticated && (
@@ -54,8 +54,8 @@ const HomePage = () => {
       <section className="feature-section">
         <div className="section-header">
           <h2 className="section-title">Engineered for Creators & Artists</h2>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '520px', margin: '0 auto' }}>
-            Built to understand visual aesthetics, mood, and storytelling to skyrocket your Instagram reach.
+          <p style={{ color: 'var(--color-text-muted)', maxWidth: '520px', margin: '0 auto' }}>
+            Built to understand visual aesthetics, mood, and storytelling to elevate your Instagram presence.
           </p>
         </div>
 

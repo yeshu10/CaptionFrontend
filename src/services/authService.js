@@ -1,6 +1,9 @@
-import axiosClient from './axiosClient';
+import axiosClient from '../api/axiosClient';
 
-export const authApi = {
+/**
+ * Authentication service handling registration, login, and session validation
+ */
+export const authService = {
   register: async (userData) => {
     return await axiosClient.post('/auth/register', userData);
   },
@@ -11,11 +14,7 @@ export const authApi = {
 
   getMe: async () => {
     return await axiosClient.get('/auth/me');
-  },
-
-  updateProfile: async (profileData) => {
-    return await axiosClient.put('/auth/profile', profileData);
   }
 };
 
-export default authApi;
+export default authService;

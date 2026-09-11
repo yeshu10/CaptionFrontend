@@ -151,17 +151,17 @@ const DashboardPage = () => {
       <div className="studio-header">
         <div>
           <h1 className="studio-title">
-            Creator Studio <span className="gradient-text">✨</span>
+            Creator Studio <span className="title-accent">✨</span>
           </h1>
           <p className="studio-subtitle">
-            Welcome back, {user?.name || 'Creator'}. Upload an image to generate tailored Instagram content.
+            Welcome back, {user?.name || 'Creator'}. Select your photo and creative vibe to craft your next post.
           </p>
         </div>
 
         <div>
           <Link to="/history" className="btn btn-secondary btn-sm">
             <History size={16} />
-            <span>View Saved History</span>
+            <span>Saved History</span>
           </Link>
         </div>
       </div>
@@ -191,14 +191,14 @@ const DashboardPage = () => {
           {isGenerating ? (
             <div className="glass-panel result-loading-card">
               <div className="pulse-loader">
-                <Wand2 size={28} />
+                <Sparkles size={26} />
               </div>
               <div style={{ maxWidth: '380px' }}>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.4rem' }}>
-                  Analyzing Your Visual Artwork
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '0.4rem', color: 'var(--color-text)' }}>
+                  Creating your caption...
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Gemini Vision is inspecting colors, focal points, storytelling elements, and generating tailored hooks, captions, and hashtags...
+                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  Analyzing visual composition, colors, and mood to craft tailored hooks, caption, and hashtags.
                 </p>
               </div>
             </div>
@@ -215,14 +215,14 @@ const DashboardPage = () => {
           ) : (
             <div className="glass-panel result-empty-card">
               <div className="result-empty-icon animate-pulse-glow">
-                <Sparkles size={36} />
+                <Sparkles size={32} />
               </div>
-              <div style={{ maxWidth: '380px' }}>
-                <h3 style={{ fontSize: '1.35rem', marginBottom: '0.5rem' }}>
-                  Your Instagram Post Appears Here
+              <div style={{ maxWidth: '400px' }}>
+                <h3 style={{ fontSize: '1.35rem', marginBottom: '0.45rem', color: 'var(--color-text)' }}>
+                  Your Instagram post starts here
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: '1.6' }}>
-                  Upload a photo or artwork on the left, pick your vibe and format, then hit <strong>Generate</strong> to let Gemini craft an engaging post.
+                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9375rem', lineHeight: '1.6' }}>
+                  Upload an artwork, photo or reel still on the left, choose your tone, and let Gemini craft an authentic post.
                 </p>
               </div>
 
@@ -235,9 +235,9 @@ const DashboardPage = () => {
                   marginTop: '0.5rem'
                 }}
               >
-                <span className="badge badge-brand">🎨 Art Stories</span>
+                <span className="badge badge-brand">🎨 Painting & Art</span>
                 <span className="badge badge-pink">🎬 Reel Hooks</span>
-                <span className="badge badge-cyan">🛍️ Product CTAs</span>
+                <span className="badge badge-cyan">🛍️ Editorial CTAs</span>
               </div>
             </div>
           )}

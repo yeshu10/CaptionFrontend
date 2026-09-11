@@ -46,8 +46,8 @@ const HistoryCard = ({ item, onView, onDelete }) => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1))',
-              color: 'var(--text-muted)'
+              background: 'var(--color-surface-tint)',
+              color: 'var(--color-text-muted)'
             }}
           >
             No Preview
@@ -84,7 +84,7 @@ const HistoryCard = ({ item, onView, onDelete }) => {
             title="Copy entire post"
           >
             {copied ? (
-              <Check size={16} color="var(--accent-emerald)" />
+              <Check size={16} color="var(--color-success)" />
             ) : (
               <Copy size={16} />
             )}

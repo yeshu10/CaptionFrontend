@@ -7,7 +7,7 @@ export const Spinner = ({ size = 20, color }) => {
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        borderTopColor: color || '#FFFFFF'
+        borderTopColor: color || 'var(--color-primary)'
       }}
     />
   );
@@ -25,8 +25,8 @@ export const FullPageLoader = () => {
         gap: '1rem'
       }}
     >
-      <Spinner size={36} color="var(--primary-light)" />
-      <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+      <Spinner size={36} color="var(--color-primary)" />
+      <span style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>
         Loading your creative studio...
       </span>
     </div>

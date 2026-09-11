@@ -54,7 +54,7 @@ const ImageUploader = ({ selectedFile, previewUrl, onFileSelect, onClear }) => {
     <div className="glass-panel uploader-card">
       <div className="card-header">
         <div className="card-title">
-          <ImageIcon size={18} color="var(--primary-light)" />
+          <ImageIcon size={18} color="var(--color-primary)" />
           <span>Upload Image</span>
         </div>
         {selectedFile && (
@@ -107,14 +107,14 @@ const ImageUploader = ({ selectedFile, previewUrl, onFileSelect, onClear }) => {
           tabIndex={0}
         >
           <div className="dropzone-icon">
-            <UploadCloud size={28} />
+            <UploadCloud size={26} />
           </div>
           <div>
             <div className="dropzone-text">
-              Drop your visual artwork or photo here
+              Drop your artwork here
             </div>
             <div className="dropzone-subtext">
-              or click to browse from your device
+              or browse from your device
             </div>
           </div>
           <div

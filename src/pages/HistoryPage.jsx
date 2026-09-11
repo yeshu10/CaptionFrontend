@@ -104,15 +104,15 @@ const HistoryPage = () => {
       {/* Header */}
       <div className="history-header">
         <div>
-          <h1 className="studio-title">Generation History</h1>
+          <h1 className="studio-title">Post Archive</h1>
           <p className="studio-subtitle">
-            Browse, copy, refine, and manage your saved Instagram posts.
+            Browse, polish, copy, and organize your saved Instagram creations.
           </p>
         </div>
 
         <Link to="/dashboard" className="btn btn-primary btn-sm">
           <PlusCircle size={16} />
-          <span>New Generation</span>
+          <span>New Caption</span>
         </Link>
       </div>
 
@@ -136,7 +136,7 @@ const HistoryPage = () => {
             style={{
               marginBottom: '1rem',
               fontSize: '0.875rem',
-              color: 'var(--text-muted)',
+              color: 'var(--color-text-muted)',
               display: 'flex',
               alignItems: 'center',
               gap: '0.4rem'
@@ -159,7 +159,7 @@ const HistoryPage = () => {
         </>
       ) : (
         <div
-          className="glass-panel"
+          className="card"
           style={{
             padding: '4rem 2rem',
             textAlign: 'center',
@@ -175,23 +175,24 @@ const HistoryPage = () => {
               width: '64px',
               height: '64px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.05)',
+              background: '#FFF8EA',
+              border: '1px solid #FFEBB8',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: 'var(--text-muted)'
+              color: '#601D49'
             }}
           >
-            <Inbox size={32} />
+            <Inbox size={30} />
           </div>
           <div>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.35rem' }}>
-              No generations found
+            <h3 style={{ fontSize: '1.3rem', marginBottom: '0.4rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
+              {search || contentType !== 'All' || mood !== 'All' ? 'No matching posts found' : 'No captions yet'}
             </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', maxWidth: '400px' }}>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.925rem', maxWidth: '420px', margin: '0 auto', lineHeight: 1.6 }}>
               {search || contentType !== 'All' || mood !== 'All'
-                ? 'Try adjusting your search criteria or filter tags.'
-                : 'You have not saved any caption generations yet. Head over to the Studio to create your first post!'}
+                ? 'Try adjusting your search keywords or filter tags to discover other saved items.'
+                : 'Your next post starts here. Head over to the Studio to generate aesthetic hooks, captions, and hashtags with AI.'}
             </p>
           </div>
           {search || contentType !== 'All' || mood !== 'All' ? (
@@ -205,7 +206,7 @@ const HistoryPage = () => {
           ) : (
             <Link to="/dashboard" className="btn btn-primary">
               <Sparkles size={16} />
-              <span>Go to Studio</span>
+              <span>Create Your First Caption</span>
             </Link>
           )}
         </div>
